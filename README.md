@@ -11,8 +11,8 @@ From the terminal
 
 1- git clone https://github.com/HiddenShot/MG.git
 
-2- chmod +x install. sh
+2- chmod +x install.sh
 
-3- /mg. py.
+3- ./mg.py
 
 
