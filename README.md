@@ -3,9 +3,9 @@ MG community edition is an open source tool to generate payloads to perform HID 
 
 Currently MG edicion de la comunidad is in development, so we consider this version an alpha, we hope to have the support of several users for the community to grow and integrate payloads that are developed by the same community.
 
-To start you must download the github repository, give runtime permissions to the file "install. sh" (chmod +x install. sh) it will take a few minutes to install the dependencies, then you must enter the command ". /mg. py" and select a valid option to generate the payloads.
+To start you must download the github repository, give runtime permissions to the file "install. sh" (chmod +x install. sh) it will take a few minutes to install the dependencies, then you must enter the command "./mg.py" and select a valid option to generate the payloads.
 
-installation overview 
+Installation overview 
 
 From the terminal 
 
