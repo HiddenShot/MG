@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 #MG, tool for HID Attacks.
 import subprocess
