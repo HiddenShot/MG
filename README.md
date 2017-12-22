@@ -1,5 +1,5 @@
 # MG Community edition
-MG community edition is an open source tool to generate payloads to perform HID attacks on Windows systems, MG allows you to perform from small jokes, disable a firewall to generate a backdoor. 
+MG community edition is an open source pentesting tool to generate payloads to perform HID attacks on Windows systems, MG allows you to perform from small jokes, disable a firewall to generate a backdoor. 
 
 Currently MG edicion de la comunidad is in development, so we consider this version an alpha, we hope to have the support of several users for the community to grow and integrate payloads that are developed by the same community.
 
