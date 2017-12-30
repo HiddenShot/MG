@@ -2,7 +2,7 @@
 
 MG community edition is an open source pentesting tool to generate payloads to perform HID attacks on Windows systems, MG allows you to perform from small jokes, disable a firewall to generate a backdoor. 
 
-Currently MG edicion de la comunidad is in development, so we consider this version an **beta**, we hope to have the support of several users for the community to grow and integrate payloads that are developed by the same community.
+Currently MG edicion de la comunidad is in development, so we consider this version an beta, we hope to have the support of several users for the community to grow and integrate payloads that are developed by the same community.
 --------------------
 
 ## Update
@@ -28,7 +28,7 @@ cd MG
 sudo chmod +x install.sh
 ```
 ```shell
-./install.shS
+./install.sh
 ```
 ```shell
 ./mg.py
