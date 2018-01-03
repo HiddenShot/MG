@@ -16,7 +16,7 @@ Expects the development of more payloads.
 **This is the beta version of MG Community Edition.**
 --------------------
 
-##Shelves
+## Supported Platforms
 
 MG Community Edition has payloads for:
 + Rubber Ducky (by Hak5)
