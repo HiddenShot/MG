@@ -22,6 +22,7 @@ MG Community Edition has payloads for:
 + Rubber Ducky (by Hak5)
 + Arduino
 + Digispark
+
 More platforms and payloads for different operating systems (Windows 10, Linux, MacOS) will be included in future versions, wait for them!
 --------------------
 
