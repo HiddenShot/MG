@@ -13,7 +13,16 @@ Add a new payload to disable the firewall on windows 10 and 8.1 systems.
 
 Expects the development of more payloads.
 
-**This is the beta version of MG.**
+**This is the beta version of MG Community Edition.**
+--------------------
+
+##Shelves
+
+MG Community Edition has payloads for:
++ Rubber Ducky (by Hak5)
++ Arduino
++ Digispark
+More platforms and payloads for different operating systems (Windows 10, Linux, MacOS) will be included in future versions, wait for them!
 --------------------
 
 ## Installation 
